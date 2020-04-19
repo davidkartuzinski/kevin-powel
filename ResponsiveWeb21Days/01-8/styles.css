@@ -1,4 +1,6 @@
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -15,12 +17,23 @@ main {
 
 .hero {
   background-color: #23424a;
-  padding: 8rem 8rem 10rem;
+  padding: 8rem 0 10rem;
 }
 
 .inner-container {
-  width: 50%;
-  max-width: 710px;
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero-inner {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .hero-inner {
+    width: 60%;
+  }
 }
 
 .hero h1 {
@@ -49,4 +62,9 @@ main {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
+}
+
+.hero .button:hover,
+.hero .button.focus {
+  opacity: 0.75;
 }
